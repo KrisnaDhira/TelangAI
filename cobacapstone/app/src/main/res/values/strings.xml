@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">TelangAI</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_panduan">Panduan</string>
+    <string name="title_prediksi">Prediksi</string>
+    <string name="title_histori">Histori</string>
+
+    <!-- String Splash -->`
+    <string name="splash_app_logo">App Logo</string>
+    <string name="splash_server">Selamat Datang</string>
+    <string name="koneksi_error">Koneksi Anda Bermasalah</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="server_gagal">Gagal menyalakan server, coba lagi nanti.</string>
+    <string name="splash_sukses">Ayo Mulai Prediksi!</string>
+    <string name="koneksi_null">Tidak ada koneksi internet</string>
+    <string name="coba_lagi">Coba Lagi</string>
+
+    <!-- String Intro -->
+    <string name="intro_title1">Selamat Datang di <font color="#6033ba">\n Aplikasi TelangAI</font></string>
+    <string name="intro_text1">Jelajahi cara inovatif dalam mengukur pH\n larutan secara praktis, melalui pemanfaatan \n bunga telang berbasis teknologi AI</string>
+    <string name="btn_intro1">Selanjutnya</string>
+    <string name="intro_title2">Bagaimana <font color="#6033ba">\n Cara Kerjanya?</font></string>
+    <string name="intro_text2">Campurkan ekstrak bunga telang ke larutan uji,\n lalu perubahan warnanya dianalisis oleh AI\n untuk memprediksi pH secara akurat</string>
+    <string name="intro_title3"><font color="#6033ba">Ayo Mulai Ukur pH</font>\n Kamu Sekarang!</string>
+    <string name="intro_text3">Siapkan sampel, ambil foto, dan biarkan\n AI kami menganalisisnya. Yuk, ukur pH\n dengan mudah sekarang!</string>
+    <string name="btn_intro3">Mulai Sekarang!</string>
+
+    <!-- String Beranda -->
+    <string name="salam">Selamat Datang di</string>
+    <string name="nama_aplikasi">TelangAI</string>
+    <string name="title_toko_bunga">Toko Bunga Telang</string>
+    <string name="title_rekomendasi">Rekomendasi Produk</string>
+    <string name="title_artikel_terkait">Artikel Terkait</string>
+    <string name="lihat_semua_artikel">Lihat Semua</string>
+    <string name="hargaproduk">Rp-</string>
+    <string name="judulproduk">Judul Produk</string>
+
+    <!-- String Artikel -->
+    <string name="title_sumber">Sumber Artikel: </string>
+    <string name="title_image">Gambar</string>
+    <string name="title_name">Judul Artikel :</string>
+    <string name="detail_name">Your text here</string>
+    <string name="title_rilis">Tanggal Rilis :</string>
+    <string name="title_description">Isi Artikel :</string>
+    <string name="btn_kunjungi_artikel">Kunjungi Artikel</string>
+    <string name="judul_artikel">Your text here</string>
+
+    <!-- String Artikel Lihat Semua -->
+    <string name="btn_back">Back</string>
+    <string name="Halaman_nomor">Halaman 1</string>
+    <string name="btn_prev">Prev</string>
+    <string name="btn_next">Next</string>
+
+    <!-- String Panduan -->
+    <string name="judul_ekstrak">Prosedur Pembuatan Ekstrak Bunga</string>
+    <string name="mix_teks">Pencampuran Ekstrak Dengan Larutan Uji</string>
+    <string name="judulvideo">Video Penggunaan TelangAI</string>
+    <string name="deskripsi_video">Video ini menjelaskan cara penggunaan TelangAI dari awal hingga akhir. Pastikan mengikuti langkah-langkah dengan benar untuk mendapatkan hasil yang optimal.</string>
+    <string name="link_video">https://youtu.be/q-Y0bnx6Ndw?si=RNQWh1_ExUiUiB0v</string>
+    <string name="judul_deskripsi_video">Deskripsi Video</string>
+    <string name="judul_link_video">Bagian Video</string>
+
+    <!-- String Prediksi -->
+    <string name="fitur_prediksi_ph"><u>Fitur Prediksi pH</u></string>
+    <string name="info_fitur">Info Fitur</string>
+    <string name="prediksi_nama_larutan">Nama Larutan<font color="#E53935"> *</font></string>
+    <string name="field_nama">Masukkan nama larutan uji</string>
+    <string name="prediksi_deskripsi">Deskripsi</string>
+    <string name="field_deskripsi">Masukkan deskripsi larutan uji</string>
+    <string name="prediksi_gambar">Upload Gambar<font color="#E53935"> *</font></string>
+    <string name="icon_upload">Upload Icon</string>
+    <string name="btn_ambil_gambar">Pilih/Ambil Gambar</string>
+    <string name="gambar_terpilih">Gambar Terpilih</string>
+    <string name="hapus_gambar">Hapus Gambar</string>
+    <string name="format_gambar">Format didukung: JPEG, JPG, dan PNG (Max 5MB)</string>
+    <string name="btn_prediksi">Prediksi</string>
+    <string name="contoh_pengambilan_gambar">Contoh Pengambilan Gambar</string>
+
+    <!-- String Histori -->
+    <string name="histori_tgl">\u00A0Tanggal</string>
+    <string name="histori_nama">\u00A0Nama</string>
+    <string name="histori_hasil">Hasil (pH)</string>
+    <string name="histori_nodata">Tidak ada histori data</string>
+    <string name="histori_notfound">Data tidak ditemukan</string>
+    <string name="searchbar_hint"><font color="#FF000000">Cari Data</font></string>
+    <string name="ph">5</string>
+    <string name="tanggal">11/04/2020</string>
+
+    <!-- String Detail Histori -->
+    <string name="btn_back_desc">btn back</string>
+    <string name="nama_larutan">Nama Larutan</string>
+    <string name="nama_larutan_uji">Nama larutan uji</string>
+    <string name="edit_nama">Edit Nama</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="deskripsi_kosong">Deskripsi kosong</string>
+    <string name="edit_deskripsi">Edit Deskripsi</string>
+    <string name="simpan_data">Simpan Data</string>
+    <string name="hapus_data">Hapus Data</string>
+    <string name="gambar_larutan">Gambar Larutan</string>
+    <string name="hasil_prediksi">Hasil Prediksi</string>
+    <string name="hasil_prediksi_hint">Hasil prediksi</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="hasil_keterangan">Hasil Keterangan</string>
+    <string name="contohph">pH 5 - Asam Ringan</string>
+    <string name="nama_toko">Nama Toko</string>
+    <string name="kunjungi_toko">Kunjungi Toko</string>
+</resources>

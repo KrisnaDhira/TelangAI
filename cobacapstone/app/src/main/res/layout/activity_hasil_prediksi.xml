@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:context=".ui.activity.HasilPrediksiActivity">
+
+        <!-- Tombol Back -->
+        <ImageView
+            android:id="@+id/iv_back_hasilprediksi"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="@string/btn_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nama Larutan -->
+        <TextView
+            android:id="@+id/tv_hasil_nama_larutan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_larutan"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back_hasilprediksi"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama_larutan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_box"
+            android:padding="12dp"
+            android:text="@string/nama_larutan"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_hasil_nama_larutan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Deskripsi Larutan -->
+        <TextView
+            android:id="@+id/tv_hasil_deskripsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_larutan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_box"
+            android:padding="12dp"
+            android:text="@string/deskripsi_kosong"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_hasil_deskripsi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Upload gambar -->
+        <TextView
+            android:id="@+id/tv_hasil_gambar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gambar_larutan"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Container untuk ProgressBar dan ImageView -->
+        <FrameLayout
+            android:id="@+id/fl_image_container"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_hasil_gambar">
+
+            <!-- ProgressBar (akan tampil saat proses masih berjalan) -->
+            <ProgressBar
+                android:id="@+id/progress_hasil_gambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <!-- ImageView (akan tampil setelah proses selesai) -->
+            <ImageView
+                android:id="@+id/iv_hasil_gambar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/gambar_larutan"
+                android:scaleType="fitCenter"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <!-- Hasil pH dengan indikator di sebelahnya -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layout_ph"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/fl_image_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Judul Hasil Prediksi -->
+            <TextView
+                android:id="@+id/tv_hasil_ph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hasil_prediksi"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:autoSizeTextType="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Indikator warna pH di sebelahnya -->
+            <View
+                android:id="@+id/view_ph_indicator"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_rounded_box"
+                app:layout_constraintStart_toEndOf="@id/tv_hasil_ph"
+                app:layout_constraintTop_toTopOf="@id/tv_hasil_ph"
+                app:layout_constraintBottom_toBottomOf="@id/tv_hasil_ph"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Informasi pH -->
+        <TextView
+            android:id="@+id/tv_ph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:text="@string/contohph"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            android:background="@drawable/bg_rounded_box_purple"
+            app:layout_constraintTop_toBottomOf="@id/layout_ph"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_keterangan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/keterangan"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_ph"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hasil_keterangan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_box"
+            android:padding="12dp"
+            android:text="@string/hasil_keterangan"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            android:hyphenationFrequency="normal"
+            android:autoSizeTextType="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_keterangan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Menu halaman Home -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <!-- Menu halaman Upcoming Events -->
+    <item
+        android:id="@+id/navigation_panduan"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="@string/title_panduan" />
+
+    <!-- Menu halaman Prediksi -->
+    <item
+        android:id="@+id/navigation_prediksi"
+        android:icon="@drawable/baseline_photo_camera_24"
+        android:title="@string/title_prediksi" />
+
+    <!-- Menu halaman Histori -->
+    <item
+        android:id="@+id/navigation_histori"
+        android:icon="@drawable/baseline_history_24"
+        android:title="@string/title_histori" />
+
+
+</menu>

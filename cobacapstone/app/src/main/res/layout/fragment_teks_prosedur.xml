@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingTop="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_warning_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="⚠️ Harap ikuti prosedur berikut dengan benar, agar hasil pembacaan pH optimal"
+            android:textColor="@color/red"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_warning"
+            android:justificationMode="inter_word" />
+
+        <!-- Judul Extract -->
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/judul_ekstrak"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            android:textColor="@color/black"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Underline untuk Judul Extract -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ProgressBar untuk Extract -->
+        <ProgressBar
+            android:id="@+id/progressExtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- RecyclerView Extract -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExtract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"/>
+
+        <!-- Judul Mix -->
+        <TextView
+            android:id="@+id/tvMixJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mix_teks"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            android:textColor="@color/black"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Underline untuk Judul Mix -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ProgressBar untuk Mix -->
+        <ProgressBar
+            android:id="@+id/progressMix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- RecyclerView Mix -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"
+            android:paddingBottom="50dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

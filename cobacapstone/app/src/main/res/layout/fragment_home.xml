@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp">
+
+        <!-- Header Selamat Datang -->
+        <TextView
+            android:id="@+id/tv_welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/salam"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:autoSizeTextType="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:autoSizeTextType="none"
+            android:text="@string/nama_aplikasi"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome_message" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/deskripsi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_info_outline_24" />
+
+        <!-- ViewPager2 untuk Banner -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+        <!-- Dots Indicator -->
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dotIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            app:dotsColor="@color/lightGrey"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewpager_banner"
+            app:selectedDotColor="@color/purple" />
+
+        <!-- Toko Bunga Telang -->
+        <TextView
+            android:id="@+id/tv_active_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/title_toko_bunga"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dotIndicator" />
+
+        <!--        RecyclerView untuk Toko Bunga Telang-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_active_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_active_events" />
+
+        <!--         kalau tengah -->
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/recyclerView_active_events"-->
+        <!--            android:layout_width="297dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:clipToPadding="false"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:paddingStart="12dp"-->
+        <!--            android:paddingEnd="12dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_active_events" />-->
+
+        <!-- Rekomendasi Produk -->
+        <TextView
+            android:id="@+id/tv_recommended_products"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="12dp"
+            android:text="@string/title_rekomendasi"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView_active_events" />
+
+        <!-- RecyclerView untuk Rekomendasi Produk -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_recommended_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_recommended_products" />
+
+        <!-- Artikel -->
+        <TextView
+            android:id="@+id/tv_finished_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/title_artikel_terkait"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView_recommended_products" />
+
+        <!-- RecyclerView untuk Artikel -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_finished_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_finished_events" />
+
+        <!-- Progress Bar untuk Banner -->
+        <ProgressBar
+            android:id="@+id/progressBarBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_setting" />
+
+        <!-- Progress Bar untuk toko bunga telang -->
+        <ProgressBar
+            android:id="@+id/progressBarActiveEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_active_events" />
+
+        <!-- Progress Bar untuk Rekomendasi Produk -->
+        <ProgressBar
+            android:id="@+id/progressBarRecommendedProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recommended_products" />
+
+        <!-- Progress Bar untuk artikel -->
+        <ProgressBar
+            android:id="@+id/progressBarFinishedEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_finished_events" />
+
+        <TextView
+            android:id="@+id/tv_see_all_finished_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/lihat_semua_artikel"
+            android:textColor="@color/purple"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            app:layout_constraintBottom_toBottomOf="@id/tv_finished_events"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_finished_events" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

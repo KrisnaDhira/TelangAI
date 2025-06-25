@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@drawable/grey_bg"
+    android:backgroundTint="@color/lightGrey">
+
+    <!-- LinearLayout Horizontal untuk gambar + teks -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- ImageView: Gambar besar di kiri -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_Image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/title_image"
+            android:src="@drawable/baseline_image_24"
+            app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+        <!-- LinearLayout Vertikal untuk teks (judul & deskripsi) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Judul Artikel -->
+            <TextView
+                android:id="@+id/item_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:justificationMode="inter_word"
+                android:maxLines="1"
+                android:text="@string/judul_artikel"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:autoSizeTextType="none"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="@string/judul_artikel" />
+
+            <!-- Deskripsi Artikel -->
+            <TextView
+                android:id="@+id/item_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="@string/deskripsi"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:autoSizeTextType="none"
+                tools:text="@string/deskripsi" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

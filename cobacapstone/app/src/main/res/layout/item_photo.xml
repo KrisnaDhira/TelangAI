@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivPhoto"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:paddingBottom="24dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage"/>
+</FrameLayout>

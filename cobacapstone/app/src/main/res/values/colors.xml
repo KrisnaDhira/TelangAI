@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="primaryColor">#FFFF</color>
+    <color name="purple">#6033ba</color>
+    <color name="lightGrey">#e9e9e9</color>
+    <color name="buttonGrey">#C8C6C6</color>
+    <color name="red">#E53935</color>
+    <color name="blue">#2196F3</color>
+    <color name="telang">#3a476b</color>
+
+    <color name="md_theme_primary">#086B5A</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#A1F2DD</color>
+    <color name="md_theme_onPrimaryContainer">#00201A</color>
+
+    <color name="md_theme_secondary">#4B635C</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#CAE0BC</color>
+    <color name="md_theme_onSecondaryContainer">#06201A</color>
+
+    <color name="md_theme_surface">#F5FBF7</color>
+    <color name="md_theme_onSurface">#171D1B</color>
+
+    <color name="md_theme_background">#F5FBF7</color>
+    <color name="md_theme_onBackground">#171D1B</color>
+
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#93000A</color>
+    <color name="md_theme_onErrorContainer">#FBE9E9</color>
+
+    <color name="favorite_color">#D12828</color>
+    <color name="testwarna">#D4EDDD</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#919191</color>
+    <color name="testwarna1">#e8f3ed</color>
+    <color name="testwarnatext">#49454F</color>
+    <color name="black_transparent">#80000000</color>
+    <color name="indikator">#D3D3D3</color>
+</resources>

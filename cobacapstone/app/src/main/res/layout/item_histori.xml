@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center"
+    android:paddingBottom="24dp">
+
+    <!-- Tanggal -->
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:autoSizeTextType="none"
+        android:text="@string/tanggal"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <!-- nama larutan -->
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/nama_larutan"
+        android:textSize="18dp"
+        android:padding="4dp"
+        android:autoSizeTextType="none"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:textAlignment="textStart"/>
+
+    <!-- Hasil pH -->
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ph"
+        android:textSize="18dp"
+        android:autoSizeTextType="none"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+</LinearLayout>

@@ -1,0 +1,140 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.fragment.HistoriFragment">
+
+    <!-- SearchView untuk pencarian -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/searchbar_hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/lightGrey"
+        android:elevation="4dp"
+        android:padding="8dp" />
+
+    <!-- Header Tabel -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/purple"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="5dp">
+
+        <!-- Judul Tanggal -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/histori_tgl"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAlignment="textStart"
+            android:autoSizeTextType="none"/>
+
+        <!-- Judul Nama -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/histori_nama"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAlignment="textStart"
+            android:autoSizeTextType="none"/>
+
+        <!-- Judul Hasil(pH) -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/histori_hasil"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="none"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+
+    <!-- TextView untuk menampilkan pesan jika tidak ada histori -->
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/histori_nodata"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <!-- TextView untuk menampilkan pesan jika pencarian tidak menemukan hasil -->
+    <TextView
+        android:id="@+id/tvNoSearchData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/histori_notfound"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <!-- RecyclerView untuk menampilkan data -->
+
+    <!-- ProgressBar untuk loading -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        android:nestedScrollingEnabled="true"
+        android:paddingTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintVertical_bias="0.096" />
+</androidx.constraintlayout.widget.ConstraintLayout>

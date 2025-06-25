@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- Fragment untuk halaman Home -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cobacapstone.ui.fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- Fragment untuk halaman Panduan -->
+    <fragment
+        android:id="@+id/navigation_panduan"
+        android:name="com.example.cobacapstone.ui.fragment.PanduanFragment"
+        android:label="@string/title_panduan"
+        tools:layout="@layout/fragment_panduan" />
+
+    <fragment
+        android:id="@+id/navigation_histori"
+        android:name="com.example.cobacapstone.ui.fragment.HistoriFragment"
+        android:label="@string/title_histori"
+        tools:layout="@layout/fragment_histori" />
+
+    <!-- Fragment untuk halaman Histori -->
+    <fragment
+        android:id="@+id/navigation_prediksi"
+        android:name="com.example.cobacapstone.ui.fragment.PrediksiFragment"
+        android:label="@string/title_prediksi"
+        tools:layout="@layout/fragment_prediksi" />
+
+</navigation>

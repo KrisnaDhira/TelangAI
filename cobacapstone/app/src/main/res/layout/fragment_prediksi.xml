@@ -1,0 +1,343 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Konten dengan NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fitsSystemWindows="true"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <!-- Judul Prediksi -->
+            <TextView
+                android:id="@+id/tv_prediksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="none"
+                android:text="@string/fitur_prediksi_ph"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Ikon Tanda Tanya -->
+
+            <!-- Nama Larutan -->
+
+            <ImageView
+                android:id="@+id/iv_info_prediksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/info_fitur"
+                android:src="@drawable/baseline_help_outline_24"
+                app:layout_constraintStart_toEndOf="@id/tv_prediksi"
+                app:layout_constraintTop_toTopOf="@id/tv_prediksi"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_hasil_nama_larutan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="none"
+                android:text="@string/prediksi_nama_larutan"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_prediksi" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_nama_larutan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hasil_nama_larutan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGrey"
+                    android:hint="@string/field_nama"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Deskripsi Larutan -->
+            <TextView
+                android:id="@+id/tv_hasil_deskripsi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="none"
+                android:text="@string/prediksi_deskripsi"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_nama_larutan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_deskripsi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hasil_deskripsi">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGrey"
+                    android:hint="@string/field_deskripsi"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Upload gambar -->
+            <TextView
+                android:id="@+id/tv_hasil_gambar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="none"
+                android:text="@string/prediksi_gambar"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_deskripsi" />
+
+            <TextView
+                android:id="@+id/tv_warning_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="⚠️ Unggah foto larutan uji bercampur ekstrak sesuai contoh pengambilan gambar"
+                android:textColor="@color/red"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_hasil_gambar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_warning"
+                android:justificationMode="inter_word"/>
+
+            <LinearLayout
+                android:id="@+id/layout_upload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_dashed"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_warning_upload">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/icon_upload"
+                    android:src="@drawable/baseline_cloud_upload_24" />
+
+                <Button
+                    android:id="@+id/btn_upload_gambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:backgroundTint="@color/buttonGrey"
+                    android:text="@string/btn_ambil_gambar"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_file_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_file_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="none"
+                        android:ellipsize="end"
+                        android:maxWidth="330dp"
+                        android:maxLines="1"
+                        android:text="@string/gambar_terpilih"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_hapus_gambar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@string/hapus_gambar"
+                        android:src="@drawable/baseline_close_24"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:autoSizeTextType="none"
+                    android:text="@string/format_gambar"
+                    android:textColor="@color/grey"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_prediksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/purple"
+                android:text="@string/btn_prediksi"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_upload" />
+
+            <!-- Contoh Pengambilan Gambar -->
+            <TextView
+                android:id="@+id/tv_contoh_pengambilan_gambar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="none"
+                android:text="@string/contoh_pengambilan_gambar"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_prediksi" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContohGambar"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:minHeight="200dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_contoh_pengambilan_gambar"
+                app:spanCount="2" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_label_keterangan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/rvContohGambar"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tv_benar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Benar ✅"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/tv_salah"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Salah ❌"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold "
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+
+            <!--        <ProgressBar-->
+            <!--            android:id="@+id/progress_prediksi"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:visibility="gone"-->
+            <!--            android:layout_marginTop="16dp"-->
+            <!--            app:layout_constraintTop_toBottomOf="@id/layout_upload"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+            <!-- Progress Bar untuk Contoh Pengambilan Gambar -->
+            <ProgressBar
+                android:id="@+id/progress_contoh_gambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_contoh_pengambilan_gambar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Progress Bar Overlay -->
+    <FrameLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_prediksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
